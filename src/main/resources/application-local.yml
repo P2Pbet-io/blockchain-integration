@@ -1,0 +1,68 @@
+server:
+  port: 8082
+
+spring:
+  activemq:
+    broker-url: tcp://localhost:61616
+    user: user
+    password: password
+  datasource:
+    url: jdbc:postgresql://host:port/blockchain-integration
+    username: blockchain-integration
+    password: password
+
+keycloak:
+  server-url: https://keycloak
+  issuer-url: https://keycloak/realms/p2pbet
+  username: username
+  password: password
+  realm: p2pbet
+  client: client
+  secret: secret
+
+external-service:
+  bsc:
+    url: https://url-node
+    apiKey: apiKey
+  signification:
+    url: http://localhost:8080
+    request-log-level: URL_BODY
+    response-log-level: STATUS_BODY
+
+logs:
+  master:
+    contracts:
+      CUSTOM: "0x2f21764c22CC6E426314B9bE5771EfAc65De9B8D"
+      BINARY: "0xc2a445cDEe12C366Eec7AbdaAddCc251116367Bf"
+      AUCTION: "0x03EaF9DE8BD6Aea05F3349A66aa3e683322d30D2"
+      JACKPOT: "0x0A431F81c658Ac3fdF3033aAad5E4422454A2721"
+  event-mapping:
+    COMPANY_TRANSFERRED: "0x2eaafb86078e79a1c5ba2d849b419f7b246161259280747ac54379e19fcc1a2c"
+    OWNER_TRANSFERRED: "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0"
+    FEE_TAKEN: "0x0beb1b0ed06ef9bbe4294edda302b3b5c19fda4a37e6b061039e179ae4ab4c0e"
+    COMPANY_FEE_CHANGED: "0xec964a94ce283598fa6bfb136376bfcdbd96b6454a79a599aa76a7e6375a8819"
+    COMPANY_ALTER_FEE_CHANGED: "0x05bc82a1df7f2bfa4219c4eb1e561102dfed9d1b94597339b4fe93fd671aea29"
+    CUSTOM_CREATED: "0xb85c9c1012c2146cf5a4a606e995b07feecdc7cf908c6ef665c31c4191c7ed14"
+    CUSTOM_JOINED: "0xe29a83eb6d536fa721175700aba8bd1d2688fb6a4a5389695b2a49f14542d2af"
+    CUSTOM_CANCELED: "0xef99e6af1c440f351b14d7a9475bdfdb9dc7fb3548ee22b1f9d8318ad12ea470"
+    CUSTOM_CLOSED: "0x39a5fb57d550302739167b5a45f32962f2ab2804539dd63826a8ff0d0e2c1332"
+    CUSTOM_REFUNDED: "0x7169357457d0ab5f9114c12fc0d730af53ba63810a3835b77ac8f621e6ec9c39"
+    CUSTOM_PRIZE_TAKEN: "0xeaff6c829cdfe138785de8eb81e010e1785e535d072594be3ddfc1a7e0acfc38"
+    BINARY_CREATED: "0x802b69ea0e522941c98e2855a4d3bc980fa5dc6f1c2b76f36f54d8f376e2b37e"
+    BINARY_JOINED: "0xe38b4b1a08b2baf1ce1d85ed3d928f32311e44d1c383c3aaf9278e2b340fb606"
+    BINARY_CANCELED: "0x8cc440e0e5e103ec7b6512307a936f9a20eb574debfe8c6945251bf3b5861cc8"
+    BINARY_CLOSED: "0x5df82c2381eeb8a0e217f261ab6b74dc3e304f0e4a215aae02f7b56daf009a78"
+    BINARY_REFUNDED: "0x6a8a1e1a5649050a3fffc08c327d50797761bad2b131b045b6459ab01ddde4be"
+    BINARY_PRIZE_TAKEN: "0x0836e8e00d47cce743d17abbf30df2dab4d1d78161fa273b4ca4157e34ab6981"
+    AUCTION_CREATED: "0x9700d84f21ee33cdab29b168869b80af99fdfc142c7ea0f2270878f27cb2aa1b"
+    AUCTION_JOINED: "0x93830c46689ed7fbc33a6de532cce1001d5b46af1c09fc5916b741b21231795d"
+    AUCTION_CANCELED: "0xb9307819b41b37ca1e7d16a684fdfb5727d2f2ed978699975623f373be19c955"
+    AUCTION_CLOSED: "0xa874fbe13bc77eecba854c10842062ce3398a07c59c87d70b12b7f88d5205435"
+    AUCTION_REFUNDED: "0x09f3ae3d8276bcb08f0ef3e75e7e2e558225e1bd0c537d05ef85cb644e544c50"
+    AUCTION_PRIZE_TAKEN: "0xed854003a947171f324660e05bf9e3424aa954d1f7268acee8b89e056fae26be"
+    JACKPOT_CREATED: "0xcc1c553c350d5f1493b94fce7e6b3963aa09344af78c532019d0271fea9735a5"
+    JACKPOT_JOINED: "0xc38bb5a797024adfbf21d09f9199fb218bcb4b0b49e2b1912b705592b0408d79"
+    JACKPOT_CANCELED: "0x15d349e507b13c195aad9efc962d587ac7b921823822b55d2d369432a6b61c4a"
+    JACKPOT_CLOSED: "0xc18ad3c3f3147e585e50b2b4407e4380dc0c96fbd7da710064033f5c3d0f9439"
+    JACKPOT_REFUNDED: "0xc861a89f4d54d79260033a759d8dc0e9178ade213452c04c3197da7493819979"
+    JACKPOT_PRIZE_TAKEN: "0x5f01de1f106ae0f5ab8409b60c00ff11f8349d44dd417ece247c6dad0741dd43"
